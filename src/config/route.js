@@ -5,6 +5,7 @@ import {Messages} from "../pages/InputMessage/Messages";
 import {Bills} from "../pages/Spending/Bills";
 import {SubmitMessage} from "../pages/InputMessage/SubmitMessage";
 import {SubmitBill} from "../pages/Spending/SubmitBill";
+import {BillList} from "../pages/Spending/BillList";
 
 export const API_COMMON = "/api"
 export const API_COLLECTOR = API_COMMON
@@ -21,6 +22,7 @@ export const routesConfig = t => {
     routeArray.push({
         label: "消费", context: [
             {label: '账单', url: "bills", context: <Bills/>},
+            {label: '账单(列表)', url: "billList", context: <BillList/>},
             {label: '手动提交', url: "submitBill", context: <SubmitBill/>},
         ], icon: <BugOutlined/>
     });

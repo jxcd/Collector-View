@@ -15,6 +15,8 @@ export const ifNotBlack = (value, onNotBlack = v => v, isBlack = "") => notBlack
 export const ifTest = (value, test = ((_) => false), defaultValue = null, pass = v => v) =>
     test(value) ? pass(value) : defaultValue;
 
+export const numberFixed = (number, bounds = 3) => number.toFixed(bounds)
+
 // 开发者模式, 1. nodejs启动
 export const developmentMode = () =>
     process.env.NODE_ENV === 'development' && Boolean(process.env.REACT_APP_DEV_MODE);

@@ -257,7 +257,7 @@ const InputItem = ({item, onChange, value}) => {
     }
 }
 
-const rangePresets = (t) => [
+export const rangePresets = (t) => [
     {
         label: t('Table.currentHour'),
         value: [dayjs().startOf('h'), dayjs().endOf('h')],
